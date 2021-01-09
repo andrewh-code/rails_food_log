@@ -1,0 +1,30 @@
+$ rails g model Entry
+- generate a basic model template
+- also generate the needed migrations and unit tests etc
+
+$ rails d model Entry --> delete the model and the files generated in the db etc
+
+$ rails g scaffold Entry
+--> creates CRUD stuff 
+
+$ rails g scaffold Entry meal_type:string calories:integer proteins:integer carbohydrates:integer fats:integer
+
+- we created a new model so the schema was updated, need to migrate it. Can either do it on localhost:3000 (press the button or execute a migrate command)
+$ rails db:migrate
+
+- go to routes.rb file, the resources:entries line has automatically created default routes
+find them here: 
+http://localhost:3000/rails/info/routes
+
+
+- gemfile --> install dependencies (this is the mvn or package.json)
+
+
+- in /app/views/entries/index.html.erb
+the <%=notice %> is like a vairable, tells ruby to inject a notice 
+corresponding controller --> entries_controller.rb, def create, format.html{notice...}
+
+partials
+- new.html.erb
+    - partial injected through <% render 'form', entry: @entry %>
+    - inject it into the _Form.html.erb file => render this file
