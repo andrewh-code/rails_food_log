@@ -28,3 +28,6 @@ partials
 - new.html.erb
     - partial injected through <% render 'form', entry: @entry %>
     - inject it into the _Form.html.erb file => render this file
+
+
+rails g controller static
