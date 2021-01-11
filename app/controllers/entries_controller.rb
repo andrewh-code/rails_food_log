@@ -4,7 +4,9 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    # update to focus only on today
+    @entries = Entry.where("created_at >= ?", Date.today)
+    # @entries = Entry.all
   end
 
   # GET /entries/1
