@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class EntriesControllerTest < ActionDispatch::IntegrationTest
+  
+  # to run rails, there's a whole separate database used for testing which you can configure. /config/environments/environment.db
   setup do
     @entry = entries(:one)
   end
