@@ -1,5 +1,6 @@
 # draw each route according to what resources are available
 Rails.application.routes.draw do
+  resources :categories
   get 'archives/index'
   get 'archive/index'
   resources :entries

@@ -31,3 +31,8 @@ partials
 
 
 rails g controller static
+
+
+# active record association
+# one off schema migration that creates relationship between category and entry objects
+rails generate migration add_category_reference_to_entries category:references
